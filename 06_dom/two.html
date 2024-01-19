@@ -1,0 +1,35 @@
+<!--! helps to get body-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM </title>
+</head>
+<body style="background-color: #212121; color:beige">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+    
+</body>
+<script>
+    const par=document.querySelector('.parent')
+    for (let i = 0; i < par.children.length; i++) {
+    //    console.log(par.children[i].innerHTML)
+        
+    }
+
+    //console.log(par.firstElementChild)
+    //const dayone=document.querySelector('.day')
+    //console.log(dayone.parentElement)
+    //console.log(dayone.nextElementSibling)
+
+    console.log("Nodes: ",par.childNodes)
+    //here this will make tree struct for this par,and here there are 9 nodes,after any line the first space will also be a node,doesnt matter if you give 5 spaces after one div still takes 1,then the actual div ele & also comments are considered as nodes
+
+</script>
+
+</html>

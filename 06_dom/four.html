@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="languages">
+     <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const newlis=document.createElement('li')
+        newlis.style.color='beige'
+        newlis.innerHTML=`${langName}`
+        document.querySelector('.languages').appendChild(newlis);
+    }
+    function addOptiLang(langName){
+        const newlis=document.createElement('li')
+        const textN=document.createTextNode(langName)
+        newlis.appendChild(document.createTextNode(langName))
+        document.querySelector('.languages').appendChild(newlis)
+        
+    }
+
+addOptiLang('java')
+addOptiLang('python')
+addOptiLang('Ruby')
+
+
+//eddit
+const secondL=document.querySelector("li:nth-child(2)")
+const newNode=document.createElement('li')
+newNode.textContent='Mojo'
+secondL.replaceWith(newNode)
+
+//edit
+const firstC=document.querySelector("li:first-child")
+firstC.outerHTML='<li>Typrescript</li>'
+
+//remove
+const last=document.querySelector("li:last-child")
+//last.remove()
+</script>
+</html>

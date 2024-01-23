@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutuja Kande</title>
+</head>
+<body>
+    <h1 id="heading">Rutuja Kande's Website</h1>
+    <button id="stop">Stop</button>
+</body>
+<Script>
+    function changeH1(){
+    document.querySelector('#heading').innerHTML='Rutuja Is The Best!'
+    }
+    
+    const change=setTimeout(changeH1,2000)
+    //name of function without (),else will be function call
+
+    document.querySelector('#stop').addEventListener('click',(e)=>{
+     clearTimeout(change)
+     console.log('Stopped')
+    })
+
+</Script>
+</html>

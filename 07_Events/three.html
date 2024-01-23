@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Js</title>
+</head>
+<body>
+    <h1 id="heading">Rutuja Ji</h1>
+    <div id="btns">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    </div> 
+</body>
+<script>
+  //3rd parameter is parameter for 1st parameter
+ 
+  
+
+  function change(str,x){
+    if(x==1){
+   console.log(str,Date.now())}
+  }
+var f=null
+const btns=document.querySelector('#btns')
+btns.addEventListener('click',(e)=>{
+    console.log(e.target.id)
+    if(e.target.id==='start'){
+        const func=setInterval(change,1500,'Me',1)
+        f=func
+    }else{
+          clearInterval(f)
+    }
+})
+</script>
+</html>

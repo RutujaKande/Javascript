@@ -12,9 +12,9 @@ let playGame = true;
 while(remain!=0 && playGame==true){
     const no = (Math.random() * 100 + 1).toFixed(0);
     console.log(no);
- submit.addEventListener('click', (e) => {
+ submit.addEventListener('clickk', (e) => {
  
-  e.preventDefault();
+  //e.preventDefault();
   console.log(guess.value);
   prevG.push(guess.value);
   //console.log(prevG);
@@ -32,17 +32,19 @@ while(remain!=0 && playGame==true){
   display(msg); 
 
   }
- });
  remain=remain-1;
  console.log(remain)
  remG.innerHTML=remain
+ });
+ if(remain==0){
+  display(`End game`)
+  prevG=[]
+  remain=5
+  
 }
-if(remain==0){
-    display(`End game`)
-    prevG=[]
-    remain=5
-    
+
 }
+
 
 function display(msg) {
   lowOrHigh.innerHTML = msg;

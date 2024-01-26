@@ -52,3 +52,40 @@ async function consumePromiseTwo(){
     }
 }
 consumePromiseTwo()
+
+const promiseThree=new Promise(function(resolve,reject){
+  setTimeout(function(){
+    let error=false
+    if(!error){
+    resolve({username: "raja",age:25})}
+    else{
+      reject("ERROR:JS went wrong")
+    }
+  },1000)
+})
+
+async function getData(){
+  try{
+   const response=await fetch('https://api.github.com/')
+   console.log(response)
+   const data=await response.json()
+   console.log('Hii')
+   console.log(data)
+  }catch(error){
+    console.log(error)
+  }
+}
+//getData()
+
+fetch('https://api.github.com/')
+.then((respsonse)=>{
+   return respsonse.json()
+})
+//here no need to await &all as every then happens when prev one finish working
+.then((respsonse)=>{
+  
+   console.log(respsonse)
+})
+.catch((error)=>{
+  console.log(error)
+})
